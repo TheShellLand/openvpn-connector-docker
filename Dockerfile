@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt update && \
-    apt install -y lsb-release curl sudo dbus
+    apt install -y lsb-release curl sudo dbus iptables
 
 COPY entry.sh /entry.sh
 
