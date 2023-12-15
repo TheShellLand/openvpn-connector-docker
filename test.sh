@@ -4,7 +4,7 @@
 
 cd "$(dirname $0)"; set -xe
 
-docker run -it \
+docker run -it --rm \
 --entrypoint bash \
---restart always \
+-v /sys/fs/cgroup:/sys/fs/cgroup:ro \
 ghcr.io/theshellland/openvpn-connector-docker:latest  $@
