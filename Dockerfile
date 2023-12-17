@@ -1,7 +1,7 @@
 FROM ubuntu
 
 RUN apt update \
-    && apt install -y lsb-release curl sudo dbus iptables iproute2 \
+    && apt install -y lsb-release curl sudo dbus iptables iproute2 policykit-1 \
     && DEBIAN_FRONTEND=noninteractive apt install -y iptables-persistent
 
 COPY entry.sh /entry.sh
